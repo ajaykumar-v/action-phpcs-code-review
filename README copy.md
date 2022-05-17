@@ -1,4 +1,4 @@
-This action is a part of [GitHub Actions Library](https://github.com/rtCamp/github-actions-library/) created by [rtCamp](https://github.com/rtCamp/).
+This action is a part of [GitHub Actions Library](https://github.com/tangworkshop/github-actions-library/) created by [tangworkshop](https://github.com/tangworkshop/).
 
 # PHPCS Code Review - GitHub Action
 
@@ -29,7 +29,7 @@ jobs:
       with:
         ref: ${{ github.event.pull_request.head.sha }}
     - name: Run PHPCS inspection
-      uses: rtCamp/action-phpcs-code-review@v2
+      uses: tangworkshop/action-phpcs-code-review@v2
       env:
         GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
         SKIP_FOLDERS: "tests,.github"
@@ -70,7 +70,7 @@ Variable       | Default | Possible  Values            | Purpose
 `PHPCS_SNIFFS_EXCLUDE` | -       | `WordPress.Files.FileName` (Any other comma seprated list of valid sniffs) | Single sniff or comma seprated list of sniffs to be excluded from the phpcs scan.
 `PHP_LINT`     | `true`  | `true` or `false`, *case insensitive* (Any unknown value is the same as passing `true`)  | If the default automatic linting of all PHP files should be deactivated, then this env variable should be set to `false`.
 `PHPCS_STANDARD_FILE_NAME`     |  -  | phpcs ruleset file from project root dir. i.e phpcs.ruleset.xml | PHP_CodeSniffer ruleset filename. Default filename available: '.phpcs.xml', 'phpcs.xml', '.phpcs.xml.dist', 'phpcs.xml.dist'
-`PHPCS_FILE_PATH`     |  -  | Custom phpcs execution file path from project. i.e Composer phpcs path. 'vendor/bin/phpcs' | This is useful in case of needed to use any custom coding standards apart from pre-defined in VIP/WP Coding Standards. [Wiki](https://github.com/rtCamp/action-phpcs-code-review/wiki/How-to%3F#use-custom-coding-standards)
+`PHPCS_FILE_PATH`     |  -  | Custom phpcs execution file path from project. i.e Composer phpcs path. 'vendor/bin/phpcs' | This is useful in case of needed to use any custom coding standards apart from pre-defined in VIP/WP Coding Standards. [Wiki](https://github.com/tangworkshop/action-phpcs-code-review/wiki/How-to%3F#use-custom-coding-standards)
 
 ## Modifying the bot’s behavior
 
@@ -106,7 +106,7 @@ You can add files to the root of the repository indicating folders that should n
 
 This can be used as an alternate to `SKIP_FOLDERS` env variable.
 
-**Please note** that the folders exlcuded in the PHPCS xml file do not work in this action, you can check the reason [here](https://github.com/rtCamp/action-phpcs-code-review/issues/29#issuecomment-623933663). Instead you should add all the folders to be excluded in either `SKIP_FOLDERS` env or `.vipgoci_phpcs_skip_folders` file.
+**Please note** that the folders exlcuded in the PHPCS xml file do not work in this action, you can check the reason [here](https://github.com/tangworkshop/action-phpcs-code-review/issues/29#issuecomment-623933663). Instead you should add all the folders to be excluded in either `SKIP_FOLDERS` env or `.vipgoci_phpcs_skip_folders` file.
 
 List each folder to be skipped on individual lines within those files.
 
@@ -159,11 +159,11 @@ If your git repo doesn't have `phpcs.xml` and you do not specify `args` in `main
 
 If your git repo has phpcs ruleset file other than default filename list, use `PHPCS_STANDARD_FILE_NAME` environment var to provide filename.
 
-Here is a sample [phpcs.xml](https://github.com/rtCamp/github-actions-wordpress-skeleton/blob/master/phpcs.xml) you can use in case you want to use custom sniffs.
+Here is a sample [phpcs.xml](https://github.com/tangworkshop/github-actions-wordpress-skeleton/blob/master/phpcs.xml) you can use in case you want to use custom sniffs.
 
 ### Custom Coding Standards
 
-If you have custom coding standards from your git repository, you can use composer and use `phpcs` from execution from your repository phpcs file with the help of `PHPCS_FILE_PATH` environment variable. Please refer this [wiki page](https://github.com/rtCamp/action-phpcs-code-review/wiki/How-to%3F#use-custom-coding-standards) for more information.
+If you have custom coding standards from your git repository, you can use composer and use `phpcs` from execution from your repository phpcs file with the help of `PHPCS_FILE_PATH` environment variable. Please refer this [wiki page](https://github.com/tangworkshop/action-phpcs-code-review/wiki/How-to%3F#use-custom-coding-standards) for more information.
 
 ## Screenshot
 
@@ -182,8 +182,8 @@ Please note...
 
 ## License
 
-[MIT](LICENSE) © 2019 rtCamp
+[MIT](LICENSE) © 2019 tangworkshop
 
 ## Does this interest you?
 
-<a href="https://rtcamp.com/"><img src="https://rtcamp.com/wp-content/uploads/2019/04/github-banner@2x.png" alt="Join us at rtCamp, we specialize in providing high performance enterprise WordPress solutions"></a>
+<a href="https://tangworkshop.com/"><img src="https://tangworkshop.com/wp-content/uploads/2019/04/github-banner@2x.png" alt="Join us at tangworkshop, we specialize in providing high performance enterprise WordPress solutions"></a>

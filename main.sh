@@ -105,7 +105,7 @@ echo "/home/rtbot/vip-go-ci-tools/vip-go-ci/vip-go-ci.php \
   $phpcs_sniffs_exclude \
   $skip_folders_option \
   $php_lint_option \
-  --informational-url='https://github.com/rtCamp/action-phpcs-code-review/'"
+  --informational-url='https://github.com/tangworkshop/action-phpcs-code-review/'"
 
 gosu rtbot bash -c \
   "/home/rtbot/vip-go-ci-tools/vip-go-ci/vip-go-ci.php \
@@ -123,4 +123,4 @@ gosu rtbot bash -c \
   $phpcs_sniffs_exclude \
   $skip_folders_option \
   $php_lint_option \
-  --informational-url='https://github.com/rtCamp/action-phpcs-code-review/'"
+  --informational-url='https://github.com/tangworkshop/action-phpcs-code-review/'"
